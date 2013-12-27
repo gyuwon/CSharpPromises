@@ -20,9 +20,9 @@ namespace CSharpPromises
                 dynamic story = await GetJson("story.json");
                 Console.WriteLine(story.heading);
 
-                var chapterTasks = ((JArray)story.chapterUrls).Select(e => GetJson(e));
+                var chapterTasks = ((JArray)story.chapterUrls).Select(GetJson);
 
-                foreach (var task in chapterTasks)
+                foreach (var task in chapterTasks.ToList())
                 {
                     dynamic chapter = await task;
                     Console.WriteLine(chapter.html);
