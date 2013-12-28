@@ -32,7 +32,7 @@ namespace CSharpPromises
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Argh, borken: {0}", exception.Message);
+                Console.WriteLine("Argh, broken: {0}", exception.Message);
             }
         }
 
