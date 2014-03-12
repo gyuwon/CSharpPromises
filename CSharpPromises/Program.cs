@@ -10,6 +10,9 @@ namespace CSharpPromises
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Press [enter] to start");
+            Console.ReadLine();
+
             Run().Wait();
         }
 
